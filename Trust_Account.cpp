@@ -26,3 +26,9 @@ bool Trust_Account::withdraw(double amount)
         return false;
     }
 }
+
+std::ostream &operator<<(const std::ostream &out, const Trust_Account &account)
+{
+    out << "[Trust Account: " << account.name << ": " << account.balance << ", " << account.int_rate << "%, withdrawals: " << account.num_withdrawals << "]";
+    return out;
+}
