@@ -19,7 +19,7 @@ bool Trust_Account::withdraw(double amount)
     if (num_withdrawals <= MAX_WITHDRAWS && amount <= (balance * MAX_PERCENTAGE))
     {
         num_withdrawals++;
-        return Savings_Account::deposit(amount);
+        return Savings_Account::withdraw(amount);
     }
     else
     {
